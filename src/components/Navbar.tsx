@@ -1,4 +1,4 @@
-import { Box, Flex, Link as ChakraLink, Button, Stack, IconButton, Tooltip } from '@chakra-ui/react'
+import { Box, Flex, Link as ChakraLink, Button, Stack, Tooltip } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Link as RouterLink } from 'react-router-dom'
 import { useColorMode } from '@chakra-ui/react'
