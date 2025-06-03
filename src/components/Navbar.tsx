@@ -1,7 +1,8 @@
-import { Box, Flex, Link as ChakraLink, Button, Stack } from '@chakra-ui/react'
+import { Box, Flex, Link as ChakraLink, Button, Stack, IconButton, Tooltip } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Link as RouterLink } from 'react-router-dom'
 import { useColorMode } from '@chakra-ui/react'
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa'
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -23,7 +24,7 @@ export default function Navbar() {
         </Flex>
 
         <Flex alignItems="center">
-          <Stack direction="row" spacing={[4, 6, 8]}>
+          <Stack direction="row" spacing={[4, 6, 8]} alignItems="center">
             <ChakraLink
               as={RouterLink}
               to="/about"
@@ -40,14 +41,36 @@ export default function Navbar() {
             >
               Projects
             </ChakraLink>
-            <ChakraLink
-              as={RouterLink}
-              to="/resume"
-              color={colorMode === 'light' ? 'gray.600' : 'white'}
-              _hover={{ textDecoration: 'none', color: 'blue.500' }}
-            >
-              Resume
-            </ChakraLink>
+            <Tooltip label="Resume">
+              <ChakraLink
+                as={RouterLink}
+                to="/resume"
+                color={colorMode === 'light' ? 'gray.600' : 'white'}
+                _hover={{ textDecoration: 'none', color: 'blue.500' }}
+              >
+                <Box as={FaFileAlt} size="20px" />
+              </ChakraLink>
+            </Tooltip>
+            <Tooltip label="GitHub">
+              <ChakraLink
+                href="https://github.com/mattct027"
+                isExternal
+                color={colorMode === 'light' ? 'gray.600' : 'white'}
+                _hover={{ color: 'blue.500' }}
+              >
+                <Box as={FaGithub} size="20px" />
+              </ChakraLink>
+            </Tooltip>
+            <Tooltip label="LinkedIn">
+              <ChakraLink
+                href="https://www.linkedin.com/in/mattct027/"
+                isExternal
+                color={colorMode === 'light' ? 'gray.600' : 'white'}
+                _hover={{ color: 'blue.500' }}
+              >
+                <Box as={FaLinkedin} size="20px" />
+              </ChakraLink>
+            </Tooltip>
             <Button onClick={toggleColorMode} size="sm">
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
