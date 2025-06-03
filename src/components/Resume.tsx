@@ -22,7 +22,7 @@ export default function Resume() {
           boxShadow="lg"
         >
           <iframe
-            src="/MatthewResume (1).pdf"
+            src="/MatthewResume.pdf"
             width="100%"
             height="100%"
             style={{ border: 'none' }}
