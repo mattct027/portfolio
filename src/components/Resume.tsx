@@ -1,8 +1,6 @@
-import { Box, Container, Heading, useColorMode } from '@chakra-ui/react'
+import { Box, Container, Heading } from '@chakra-ui/react'
 
 export default function Resume() {
-  const { colorMode } = useColorMode()
-
   return (
     <Box w="100%" maxW="100vw">
       <Container maxW="1400px" py={8} px={[4, 6, 8]}>
