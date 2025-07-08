@@ -34,7 +34,32 @@ const projects: Project[] = [
       'Tailwind CSS'
     ],
     link: 'https://blackscholes.vercel.app/'
-  }
+
+  },
+  {
+    title: 'StrategyBacktester',
+description: 'A full-stack backtesting platform for simulating moving average crossover strategies on Nasdaq futures. Features adjustable MA windows, stop-loss/take-profit logic, real-time PnL tracking, and dynamic trade logs with <450ms API latency.',
+technologies: [
+  'Streamlit',
+  'FastAPI',
+  'Python',
+  'Pandas',
+  'yfinance'
+],
+link: 'https://strategybacktester.streamlit.app/'
+
+  },
+  {title: 'WebApp-SuppliersPartsJobs',
+    description: 'A Java-based enterprise web application for managing suppliers, parts, jobs, and shipments. Includes user authentication, role-based access (root, client, accountant), dynamic SQL execution, and secure JDBC-backed data operations.',
+    technologies: [
+      'Java',
+      'JSP',
+      'Servlets',
+      'MySQL',
+      'Tomcat'
+    ],
+    link: 'https://github.com/mattct027/WebApp-SuppliersPartsJobs'
+    }
 ]
 
 export default function Projects() {
